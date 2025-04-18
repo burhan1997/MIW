@@ -1,3 +1,5 @@
+package controller;
+
 /**
  * Dit programma toont een kerstgroet.
  * Auteur: Burhan Elaldi

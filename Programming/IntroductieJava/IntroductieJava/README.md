@@ -64,3 +64,75 @@ public class Kat {
 - **Let op**: In 1.8 heeft Liang het over een `javac` command. Dat gebruiken we niet, we doen het zoals hierboven beschreven is met **IntelliJ**.
 
 - **Let op**: In 1.9.2 heeft Liang het over inspringingen (indentations). **IntelliJ** regelt de inspringing voor je, standaard staat deze op vier spaties. Dit is ook de standaard binnen **MIW**. Liang gebruikt in zijn voorbeelden een inspringing van twee spaties.
+
+## 2. VARIABELEN
+
+### 2.1 Variabelen declareren en vullen
+
+1. **Zet de drie regels code in comments**:
+    - Dit betekent dat je de regels code als volgt van commentaar voorziet, zodat ze niet uitgevoerd worden tijdens het programma:
+
+   ```java
+   package controller;
+   public class IntroductieJavaLauncher {
+       public static void main(String[] args) {
+           // System.out.println("Hello World!");
+           // System.out.println("Programming is fun!");
+           // System.out.println("Fundamentals First");
+           // System.out.println("Problem Driven");
+       }
+   }
+   ```
+
+2. **Ga verder met Strings**:
+    - Strings zijn een van de belangrijkste data types in Java. Ze worden gebruikt voor tekstuele data. Strings zijn in Java een object van de `String` class.
+
+3. **Bekijk op LinkedIn Learning: Primitive data types**:
+    - Het is belangrijk om de primitive data types in Java goed te begrijpen, zoals:
+        - `int`: voor gehele getallen
+        - `double`: voor kommagetallen
+        - `char`: voor enkele karakters
+        - `boolean`: voor waarheidswaarden (true/false)
+
+4. **Ga verder met: Data types and variables**:
+    - Variabelen in Java worden gedeclareerd met een specifiek type. Bijvoorbeeld:
+
+      ```java
+      int leeftijd = 25;
+      String naam = "Burhan";
+      ```
+
+5. **Using indexes with strings**:
+    - Je kunt de individuele tekens van een string benaderen door hun index:
+
+      ```java
+      String tekst = "Java";
+      char letter = tekst.charAt(0); // Dit geeft 'J'
+      ```
+
+6. **Ga verder met: Concatenating strings**:
+    - Strings kunnen worden samengevoegd (geconcateneerd) met behulp van de `+` operator:
+
+      ```java
+      String naam = "Burhan";
+      String begroeting = "Hallo, " + naam + "!";
+      System.out.println(begroeting); // Output: Hallo, Burhan!
+      ```
+
+7. **Lees Liang 2.1 en 2.2 tot aan Listing 2.1**:
+    - Deze secties behandelen het gebruik van variabelen en het declareren van verschillende data types in Java. Variabelen zijn essentieel voor het opslaan van gegevens die in je programma gebruikt worden.
+
+8. **Voer de code op regel 3 – 14 van Listing 2.1 in**:
+    - De code in Listing 2.1 betreft de declaratie en initialisatie van variabelen en het gebruik ervan in methoden:
+
+      ```java
+      public class IntroductieJavaLauncher {
+          public static void main(String[] args) {
+              int leeftijd = 25;
+              String naam = "Burhan";
+              double lengte = 1.75;
+              System.out.println("Mijn naam is " + naam + " en ik ben " + leeftijd + " jaar oud.");
+          }
+      }
+      ```
+    - Deze code toont hoe je variabelen kunt gebruiken in Java en hoe je ze kunt afdrukken met behulp van de `System.out.println` functie.

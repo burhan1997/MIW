@@ -9,7 +9,7 @@ public class OefeningLauncher {
         Scanner input = new Scanner(System.in);
         System.out.print("Wat is je leeftijd?: ");
         int leeftijd = input.nextInt();
-        if(leeftijd >= 18){
+        if (leeftijd >= 18) {
             System.out.println("Je mag stemmen!");
         } else {
             System.out.println("Je mag niet stemmen!");
@@ -22,8 +22,8 @@ public class OefeningLauncher {
         int getal = input.nextInt();
         final int MAX = 10;
         final int MIN = 1;
-        int computerGetal = (int)((Math.random()*(MAX-MIN+1))+MIN);
-        if(getal == computerGetal){
+        int computerGetal = (int) ((Math.random() * (MAX - MIN + 1)) + MIN);
+        if (getal == computerGetal) {
             System.out.println("Goed! Hetzelfde met onze getal die is ook " + computerGetal);
         } else if (getal < computerGetal) {
             System.out.println("Jammer: te hoog, onze getal was " + computerGetal);
@@ -36,9 +36,9 @@ public class OefeningLauncher {
         //moet (vanaf 4 jaar tot je 16e) of niet. Doe dit met 1 if statement.
         System.out.print("Wat is je leeftijd want we gaan even kijken dat je verplicht bent naar school of niet?: ");
         int jeLeeftijd = input.nextInt();
-        if( jeLeeftijd >= 4 && jeLeeftijd <= 16){
+        if (jeLeeftijd >= 4 && jeLeeftijd <= 16) {
             System.out.println("Whoppaa!!Je bent verplicht naar school :)");
-        }else{
+        } else {
             System.out.println("Je bent niet verplicht. Jammer");
         }
 
@@ -67,7 +67,7 @@ public class OefeningLauncher {
         input.nextLine();
         System.out.print("Geef een nummer tussen 1-7: ");
         int numDag = input.nextInt();
-        switch (numDag){
+        switch (numDag) {
             case 1:
                 System.out.println("Maandag");
                 break;
@@ -92,6 +92,38 @@ public class OefeningLauncher {
             default:
                 System.out.println("Onbekende dag nummer");
         }
+
+
+        //voorbeeld
+        System.out.print("De hoeveelste maand is het? ");
+        int nummerMaand = input.nextInt();
+        String maandNaam = "onbekend";
+        switch (nummerMaand) {
+            case 1:
+                maandNaam = "Januari";
+                break;
+            case 2:
+                maandNaam = "Februari";
+                break;
+            case 3:
+                maandNaam = "Maart";
+                break;
+            default:
+                System.out.println("Geen geldig maandnummer");
+        }
+        System.out.println("Het is " + maandNaam);
     }
 
+/*
+            case 1 -> maandNaam = "Januari";
+            case 2 -> maandNaam = "Februari";
+            case 3 -> maandNaam = "Maart";
+            default -> maandNaam = "onbekend";
+        }
+        System.out.println("Het is " + maandNaam);
+
+
+ */
 }
+
+

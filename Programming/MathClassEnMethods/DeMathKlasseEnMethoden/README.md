@@ -127,6 +127,109 @@ double wortel = Math.sqrt(16);        // vierkantswortel
 | Ingebouwde functies | Bijvoorbeeld: `Math.max()`, `String.length()`, `Math.sqrt()`|
 
 ---
+
+## 🔹 Methoden met return type
+
+Soms wil je dat een methode een **waarde teruggeeft**. Dan gebruik je een `return` type zoals `int`, `double`, `String`, etc.
+
+```java
+public static int vermenigvuldig(int a, int b) {
+    return a * b;
+}
+```
+
+**Gebruik:**
+
+```java
+int resultaat = vermenigvuldig(3, 4);  // Output: 12
+```
+
+---
+
+## 🔹 Voorbeeld – Alles samen
+
+```java
+public class Demo {
+
+    public static void main(String[] args) {
+        zegHallo();
+        begroet("Burhan");
+        int uitkomst = vermenigvuldig(2, 5);
+        System.out.println("2 x 5 = " + uitkomst);
+    }
+
+    public static void zegHallo() {
+        System.out.println("Hallo!");
+    }
+
+    public static void begroet(String naam) {
+        System.out.println("Hallo, " + naam);
+    }
+
+    public static int vermenigvuldig(int a, int b) {
+        return a * b;
+    }
+}
+```
+
+
+## 🔹 Return type voorbeelden
+
+| Return Type | Voorbeeld                        | Uitleg                              |
+|-------------|----------------------------------|-------------------------------------|
+| `void`      | `public static void test() {}`   | Voert uit, geeft niks terug         |
+| `int`       | `public static int getal() {}`   | Geeft een geheel getal terug        |
+| `double`    | `public static double pi() {}`   | Geeft kommagetal terug              |
+| `String`    | `public static String naam() {}` | Geeft tekst terug                   |
+
+---
+
+## 🔹 Ingebouwde methodes
+
+Java bevat al duizenden ingebouwde methodes, zoals:
+
+- `System.out.println()`
+- `Math.max(a, b)`
+- `String.length()`
+- `input.nextInt()`  
+  (Allemaal methodes van klassen!)
+
+---
+
+## 🧠 Oefening
+
+👉 Schrijf een programma met 3 methodes:
+1. `toonMenu()` → toont een menu in de console
+2. `kwadraat(int x)` → geeft het kwadraat terug
+3. `isEven(int x)` → geeft `true` of `false`
+
+---
+
+```java
+public class OefenMethodes {
+    public static void main(String[] args) {
+        toonMenu();
+        System.out.println("5^2 = " + kwadraat(5));
+        System.out.println("Is 4 even? " + isEven(4));
+    }
+
+    public static void toonMenu() {
+        System.out.println("Welkom in het menu:");
+        System.out.println("1. Kwadraat berekenen");
+        System.out.println("2. Even checken");
+    }
+
+    public static int kwadraat(int x) {
+        return x * x;
+    }
+
+    public static boolean isEven(int x) {
+        return x % 2 == 0;
+    }
+}
+```
+
+---
 # 📘 De `Math` Klasse in Java – Uitleg & Voorbeelden
 
 ---

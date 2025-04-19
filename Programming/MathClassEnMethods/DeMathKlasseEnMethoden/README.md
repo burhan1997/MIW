@@ -1,6 +1,61 @@
 # 📘 4. Functies in Java – Uitleg & Voorbeelden
 
----
+
+```java 
+import java.util.Scanner;
+
+/**
+* Demo voor random vermenigvuldiging
+*
+* Wat is 17 * 5?
+* Antwoord: 85
+* Dat antwoord is goed! 17 * 5 = 85
+*
+* Wat is 17 * 5?
+* Antwoord: 83
+* Helaas! 17 * 5 = 85
+*
+*/
+public class DemoVermenigvuldigingLauncher {
+
+    public static int geefRandomIntTussenWaardes( int onderGrens, int bovenGrens) {
+        int random_getal = (int)((Math.random() * ((bovenGrens - onderGrens) + 1)) + onderGrens);
+        return random_getal;
+    }
+
+    public static int geefOpgaveEnVraagAntwoord( Scanner scanner, int X, int Y ) {
+        System.out.println("Wat is: " + X + " * " + Y + " ?");
+        System.out.printf("Geef je antwoord: ");
+        int input = scanner.nextInt();
+        return input;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        final int BOVEN_GRENS = 20;
+        final int ONDER_GRENS = 1;
+
+        // maak 1 random getal
+        int getal1 = geefRandomIntTussenWaardes(ONDER_GRENS, BOVEN_GRENS);
+
+        // maak nog random getal
+        int getal2 = geefRandomIntTussenWaardes(ONDER_GRENS, BOVEN_GRENS);
+
+        int antwoord = getal1 * getal2;
+
+        // print de opgave en vraag gebruiker om input
+        int input = geefOpgaveEnVraagAntwoord( scanner, getal1, getal2 );
+
+        // controleer het antwoord en print het resultaat
+        if ( input == antwoord ) {
+            System.out.println("Lekker gewerkt! " + getal1 + " * " + getal2 + " = " + antwoord);
+        } else {
+            System.out.println("Jammer joh! " + getal1 + " * " + getal2 + " = " + antwoord);
+        }
+    }
+}
+```
 
 ## 🔹 Wat zijn functies?
 

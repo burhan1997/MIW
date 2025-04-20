@@ -1,5 +1,9 @@
 package controller;
-
+/**
+ * Auteur: burhan elaldi
+ * Doel: Dit programma toont een sterrenvierkant, toont een woord vijf keer,
+ * verdeelt euromunten eerlijk en berekent wisselgeld (afgerond op 0,05).
+ */
 import java.util.Scanner;
 
 public class MethodLauncher {

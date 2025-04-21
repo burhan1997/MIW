@@ -6,6 +6,20 @@ public class OefeningLauncher {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        /*
+        vraag de gebruiker om een getal tussen de 2 en de 7
+        als het niet goed is geef een foutmelding
+        en vraag het dan opniew
+         */
+        int getal;
+        do {
+            System.out.print("Voer een getal in tussen de 2 en 7: ");
+            getal = input.nextInt();
+            if (getal < 2 || getal > 7) {
+                System.out.println("Fout: het getal moet tussen de 2 en 7 zijn.");
+            }
+        } while (getal < 2 || getal > 7);
+        System.out.println("Je hebt een correct getal ingevoerd: " + getal);
 
 //        final int MAX = 10;
 //        final int MIN = 1;

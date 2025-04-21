@@ -1,5 +1,50 @@
 ## 🔁 `while` en `do-while` Lussen – Belangrijke Vergelijking
 
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        final int N = scanner.nextInt();
+        int n = 0; // n geeft aan hoe vaak Hello is afgedrukt
+
+        while (n < N){
+            System.out.println("Hello, World!");
+            n = n + 1; //n++
+        }
+
+
+        System.out.println((int)(Math.random() * 20 + 1.0));
+        //druk random getallen tussen 1 en 20  af totdat er 20 getrokken wordt
+        int number = 0;
+
+        while(number != 20){
+            number = (int)(Math.random() * 20 + 1.0);
+            System.out.println(number);
+        }
+
+        //oplossing van de docent
+        int getal;
+        do {
+            getal = (int) (Math.random() * 20 + 1.0);
+            System.out.println(getal);
+        } while (getal != 20);
+
+
+//        int s = 0;
+//        while (s<20){
+//            //code
+//            s = s+1 ;
+//        }
+        for (int s = 0; s<20; s++){
+            System.out.println(s);
+        }
+    }
+}
+
+```
+
 | Kenmerk                     | `while` Lus                                     | `do-while` Lus                                     |
 |-----------------------------|--------------------------------------------------|----------------------------------------------------|
 | Controlemoment             | Voor de lus begint                              | Na het uitvoeren van het codeblok                 |

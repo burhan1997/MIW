@@ -160,23 +160,3 @@ Een relatie beschrijft de verbinding tussen twee entiteiten. Voor iedere relatie
 
 ---
 
-## Belangrijke Aandachtspunten
-
-✅ **Integriteit**: De structuur moet overeenkomen met de werkelijkheid en bedrijfsregels.  
-✅ **Geen Redundantie**: Elk gegeven komt maar één keer voor.  
-✅ **Consistentie**: Geen tegenstrijdige informatie.  
-✅ **Relatiebeschrijvingen**: Altijd in twee zinnen vanuit elk entiteitstype.  
-✅ **Kardinaliteit correct toepassen**: Zowel optioneel/verplicht als maximum aantal.
-
----
-
-## 📌 Stappenplan voor het maken van een ERD
-
-1. Selecteer relevante voorbeelden uit de werkelijkheid
-2. Beschrijf ze in natuurlijke taal
-3. Bepaal de entiteittypes
-4. Bepaal attributen en identifiers (primaire sleutels)
-5. Bepaal relaties en kardinaliteit
-6. Controleer het model grondig
-
----

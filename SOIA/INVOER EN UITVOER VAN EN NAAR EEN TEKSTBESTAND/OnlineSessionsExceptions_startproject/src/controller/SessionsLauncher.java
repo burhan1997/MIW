@@ -6,6 +6,7 @@ import model.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -33,7 +34,7 @@ public class SessionsLauncher {
 //        }
 
 
-        /// /////////
+        // +++++++++
 
         List<String> regelsUitBestand = new ArrayList<>();
         File muzikantenBestand = new File("resources/Muzikanten.csv");
@@ -61,7 +62,7 @@ public class SessionsLauncher {
             }
         }
 
-//        File muzikantenBestand = new File("resources/Muzikanten.csv");
+//         File muzikantenBestand = new File("resources/Muzikanten.csv");
 //        List<Muzikant> muzikanten = new ArrayList<>();
 //        try {
 //            Scanner invoer = new Scanner(muzikantenBestand);
@@ -79,5 +80,44 @@ public class SessionsLauncher {
 //            System.out.println(muzikant);
 //            System.out.println();
 //        }
+
+
+
+        File sessionsBestand = new File("resources/Sessions.csv");
+        List<Session> sessions = new ArrayList<>();
+
+        try {
+            Scanner invoer = new Scanner(sessionsBestand);
+            while (invoer.hasNextLine()) { //(1)
+                String regel = invoer.nextLine(); // ← sadece bir kez oku
+                regelsUitBestand.add(regel);      // ← listeye eklemek istiyorsan
+
+                String[] regelArray = regel.split(",");
+
+                // Muzikant
+                String naam = regelArray[0];
+                String instrument = regelArray[1];
+                int jaarErvaring = Integer.parseInt(regelArray[2]);
+
+                Muzikant muzikant = new Muzikant(naam, instrument, jaarErvaring);
+
+                // Session
+                LocalDate datum = LocalDate.parse(regelArray[3]);
+                double duur = Double.parseDouble(regelArray[4]);
+                boolean opgenomen = Boolean.parseBoolean(regelArray[5]);
+                int aantalMuzikanten = Integer.parseInt(regelArray[6]);
+
+                Session session = new Session(muzikant, datum, duur, opgenomen, aantalMuzikanten);
+                sessions.add(session);
+
+            }
+        } catch (FileNotFoundException nietGevonden) {
+            System.out.println("Het bestand is niet gevonden.");
+        }
+        for (Session session : sessions){
+            System.out.println(session);
+            System.out.println();
+        }
+
     }
 }

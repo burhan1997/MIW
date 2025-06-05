@@ -1,3 +1,25 @@
+
+/*
+ * Dit programma demonstreert exception handling in Java met betrekking tot invoer van een gebruiker.
+ *
+ * Functionaliteit:
+ * 1. Het vraagt de gebruiker om de lengte van een zijde van een vierkant.
+ *    - Indien de invoer geen geldig getal is (zoals een woord of letter), wordt dit netjes afgehandeld.
+ * 2. Het maakt een Vierkant-object aan en toont de berekende oppervlakte.
+ * 3. Vervolgens vraagt het programma om een oppervlakte.
+ *    - Het berekent de bijbehorende zijde via de methode berekenZijde().
+ *    - Indien de gebruiker een ongeldig getal of een negatieve waarde invoert, wordt dit ook opgevangen.
+ *
+ * Gebruikte exception handling:
+ * - InputMismatchException: als de gebruiker een onjuist type invoert (bijv. tekst in plaats van een getal).
+ * - IllegalArgumentException: als de gebruiker een negatieve oppervlakte invoert.
+ *
+ * Doel:
+ * - De gebruiker begeleiden bij correcte invoer.
+ * - Robuust omgaan met fouten zonder dat het programma crasht.
+ */
+
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

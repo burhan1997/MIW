@@ -17,6 +17,7 @@
  * Doel:
  * - De gebruiker begeleiden bij correcte invoer.
  * - Robuust omgaan met fouten zonder dat het programma crasht.
+ * Burhan
  */
 
 

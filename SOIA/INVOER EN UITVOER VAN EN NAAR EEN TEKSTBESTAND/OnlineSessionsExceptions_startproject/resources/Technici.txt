@@ -1,0 +1,20 @@
+Technicus: bontj
+	voornaam: Jan
+	mobiel: 0625748231
+
+
+Technicus: dijkd
+	voornaam: Dick
+	mobiel: 0653623418
+
+
+Technicus: johna
+	voornaam: Albert
+	mobiel: 0656237822
+
+
+Technicus: kompe
+	voornaam: Pete
+	mobiel: 0625367188
+
+
